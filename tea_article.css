@@ -200,8 +200,6 @@ div.scroll{
   width: 100%;
   height: 217px;
   background-color: #fff;
-  border-top:10px solid #fff;
-  border-bottom:10px solid #fff;
 }
 
 div.scroll .single .text{
@@ -230,34 +228,25 @@ div.scroll .single ul img{
 
 }
 
-div.scroll .set ul{
- display: grid;
-  grid-template-columns: 10% 10% 10% 20%; 
-  gap: 8px; 
+.scroll .set{
+  display:flex;
+  align-items:center;
   justify-content: center;
+  height:217px;
 }
 
-
-div.scroll .set ul li{
-   width: 100%; 
-  height: 90px; 
-  /*background: red;*/
+.scroll .set .image{
+  display:grid;
+  grid-template-rows:repeat(2,1fr);
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
 }
 
-
-div.scroll .set ul li img{
-   width: 100%; 
-  height: 100%; 
-  object-fit: cover;
-
+.scroll .set .image img{
+  height:90px;
+  object-fit:cover;
+  width:90px;
 }
-
-div.scroll .set .text{
-  position:relative;
-  top:80px;
-}
-
-
 
 
 /* コメント */
