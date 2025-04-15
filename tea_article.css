@@ -268,6 +268,10 @@ div.scroll .set .text{
 
 #comment .img{
   width:30%;
+  z-index:1;
+  position:relative;
+  z-index:1;
+
 }
 
 #comment .img img{
@@ -342,6 +346,8 @@ div.scroll .set .text{
 
 #selection ul li .img{
   width: 25.7031vw;
+  position:relative;
+  z-index:1;
 }
 
 #selection ul li .img img{
@@ -518,6 +524,7 @@ div.scroll .set .text{
 
 
 
+
 *{
   box-sizing: border-box;
 }
@@ -528,3 +535,27 @@ div.scroll .set .text{
   margin:230px 10%;
 }
 }
+
+/*jQuery*/
+.scroll-fadeIn,
+.scroll-slide,
+.scroll-slide-left{
+  opacity:0;
+  visibility: hidden;
+  transition: 1s,visibility 1s,transform 1s;
+}
+
+.scroll-slide{
+  transform:translateX(200px);
+}
+
+.scroll-slide-left{
+  transform:translateX(-200px);
+}
+
+.scroll-after{
+  opacity:1;
+  visibility:visible;
+  transform:translateX(0px);
+}
+

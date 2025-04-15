@@ -36,6 +36,19 @@
                 speed:2000
             });
 
+            // スクロール
+                  $(window).scroll(function(){
+                        $(".scroll-fadeIn,.scroll-slide,.scroll-slide-left").each(function(){
+                              var targetPosition=$(this).offset().top;
+                              var scrollAmount=$(window).scrollTop();
+                              var wHeight=$(window).height();
+
+                              if(scrollAmount > targetPosition - wHeight + 100){
+                                    $(this).addClass("scroll-after");
+                              }
+                        });
+                  });
+
 
 
         })
@@ -68,7 +81,7 @@
  </div>
 
 <!-- スクロール -->
- <div class="scroll">
+ <div class="scroll scroll-fadeIn">
     <ul class="slider">
         <li class="single">
             <ul>
@@ -108,10 +121,10 @@
  <!-- コメント -->
 <div id="comment">
     <h1 class="template">COMMENT</h1>
-    <div class="img">
+    <div class="img scroll-fadeIn">
         <img src="comment_picture.jpg" alt="">
     </div>
-    <div class="text">
+    <div class="text scroll-slide">
 
         <p>みなさま、こんにちは。光舟酒店の店主、田中です。<br><br>
             コーヒー派の皆さん、紅茶の奥深さをご存知ですか？たまにハーブティーに挑戦したり、おうちにはダージリンが常備されている方々、お待たせしました！私たちの厳選した紅茶が、あなたの味覚を新たな旅に誘います。<br><br>
@@ -129,9 +142,9 @@
     <h1 class="template">SELECTION</h1>
     <ul>
         <li class="1">
-            <div class="img"><img src="picture/エメラルドモーニング.jpg" alt=""></div>
+            <div class="img scroll-fadeIn"><img src="picture/エメラルドモーニング.jpg" alt=""></div>
             
-            <div class="text">
+            <div class="text scroll-slide">
                 <h1>エメラルドモーニング</h1>
                 <p> シリアルのような爽やかな香りと、明るくクリーンな味わいが特徴の朝の紅茶。</p>
                 <div class="container"></div>
@@ -141,8 +154,8 @@
 
 
         <li class="2">
-            <div class="img"><img src="picture/ミスティックムーンライト.jpg" alt=""></div>
-            <div class="text">
+            <div class="img scroll-fadeIn"><img src="picture/ミスティックムーンライト.jpg" alt=""></div>
+            <div class="text scroll-slide-left">
                 <h1>ミスティックムーンライト</h1>
                 <p>  ラベンダーやバニラのノートが漂う、夜の静かな時間にぴったりのリラックスできる紅茶。</p>
                 <div class="container"></div>
@@ -151,8 +164,8 @@
         </li>
 
         <li  class="3">
-            <div class="img"><img src="picture/グリーンヴィーナス.jpg" alt=""></div>
-            <div class="text">
+            <div class="img scroll-fadeIn"><img src="picture/グリーンヴィーナス.jpg" alt=""></div>
+            <div class="text scroll-slide">
                 <h1>グリーンヴィーナス</h1>
                 <p>ジャスミンやハイビスカスがブレンドされ、華やかでフルーティーな香りと爽やかな味わいが楽しめる紅茶。</p>
                 <div class="container"></div>
@@ -161,8 +174,8 @@
         </li>
 
         <li class="4">
-            <div class="img"><img src="picture/ゴールデンサンライズ.jpg" alt=""></div>
-            <div class="text">
+            <div class="img scroll-fadeIn"><img src="picture/ゴールデンサンライズ.jpg" alt=""></div>
+            <div class="text scroll-slide-left">
                 <h1>ゴールデンサンライズ</h1>
                 <p> マンゴーとパッションフルーツの風味が広がり、明るい朝の太陽のようなエネルギーを与えてくれる紅茶。</p>
                 <div class="container"></div>
@@ -171,8 +184,8 @@
         </li>
 
         <li class="5">
-            <div class="img"><img src="picture/ワイルドフォレスト.jpg" alt=""></div>
-            <div class="text">
+            <div class="img scroll-fadeIn"><img src="picture/ワイルドフォレスト.jpg" alt=""></div>
+            <div class="text scroll-slide">
                 <h1>ワイルドフォレスト</h1>
                 <p>ブルーベリーやイチゴ、ブラックベリーなどの森の実をイメージしたフルーティーで自然な香りと味わいが特徴の紅茶。</p>
                 <div class="container"></div>
@@ -181,8 +194,8 @@
         </li>
 
         <li class="6">
-            <div class="img"><img src="picture/シルクエンシャント.jpg" alt=""></div>
-            <div class="text">
+            <div class="img scroll-fadeIn"><img src="picture/シルクエンシャント.jpg" alt=""></div>
+            <div class="text scroll-slide-left">
                 <h1>シルクエンシャント</h1>
                 <p>バラやラベンダーの花びらが華やかなアクセントを加え、なめらかで繊細な口当たりの紅茶。</p>
                 <div class="container"></div>
@@ -275,7 +288,7 @@
  </div>
 
 <!-- レビュー -->
-<div id="review">
+<div id="review" class="scroll-slide">
     <h1 class="template">REVIEW</h1>
     
     <ul>
