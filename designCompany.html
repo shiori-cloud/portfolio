@@ -31,16 +31,27 @@
                   });
 
                   // ABOUTUS
-                  $(window).scroll(function(){
-                        $(".scroll-fadeIn").each(function(){
-                              var targetPosition=$(this).offset().top;
-                              var scrollAmount=$(window).scrollTop();
-                              var wHeight=$(window).height();
+                  // スクロールフェードイン（読み込み時とスクロール時両方）
+      function fadeInOnScroll(){
+            $(".scroll-fadeIn").each(function(){
+                  var targetPosition = $(this).offset().top;
+                  var scrollAmount = $(window).scrollTop();
+                  var wHeight = $(window).height();
 
-                              if(scrollAmount > targetPosition - wHeight + 100){
-                                    $(this).addClass("scroll-after");
-                              }
-                        });
+                  if(scrollAmount > targetPosition - wHeight + 100){
+                        $(this).addClass("scroll-after");
+                  }
+            });
+      }
+
+      // 読み込み時にも判定
+      fadeInOnScroll();
+
+      // スクロール時に判定
+      $(window).on('scroll', function(){
+            fadeInOnScroll();
+      });
+});
                   });
             });
 
