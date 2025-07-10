@@ -233,7 +233,7 @@ header .menu:hover{
 #mainimage .background{
 	opacity:0;
 	width: 0;
-/* 	z-index:-1; */
+	z-index:-1;
 	background-color: aqua;
 }
 
