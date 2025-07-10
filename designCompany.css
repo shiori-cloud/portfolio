@@ -976,6 +976,12 @@ header .menu:hover{
 	transition:opacity 3s,visibility 3s,transform 3s;
 }
 
+.scroll-fadeIn {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+
 .scroll-after{
 	opacity: 1;
 	visibility:visible;
