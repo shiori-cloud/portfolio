@@ -69,6 +69,7 @@ width /***/:auto;
 /*全体----------------------------------------------------*/
 *{
 	box-sizing:border-box;
+	background-color:red;
 }
 
 html{
